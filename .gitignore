@@ -1,3 +1,4 @@
+.gitignore
 LinkedList.o
 main.o
 Makefile.win
