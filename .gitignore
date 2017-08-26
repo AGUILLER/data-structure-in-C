@@ -1,0 +1,7 @@
+LinkedList.o
+main.o
+Makefile.win
+mylinearlist.exe
+mylinearlist.dev
+mylinearlist.layout
+SeqList.o
