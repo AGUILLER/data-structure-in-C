@@ -1,0 +1,34 @@
+# Project: mylinearlist
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o LinkedList.o SeqList.o
+LINKOBJ  = main.o LinkedList.o SeqList.o
+LIBS     = -L"F:/dev-C++/Dev-Cpp/MinGW64/lib" -L"F:/dev-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/dev-C++/Dev-Cpp/MinGW64/include" -I"F:/dev-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/dev-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/dev-C++/Dev-Cpp/MinGW64/include" -I"F:/dev-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/dev-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/dev-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = mylinearlist.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+LinkedList.o: LinkedList.c
+	$(CC) -c LinkedList.c -o LinkedList.o $(CFLAGS)
+
+SeqList.o: SeqList.c
+	$(CC) -c SeqList.c -o SeqList.o $(CFLAGS)
