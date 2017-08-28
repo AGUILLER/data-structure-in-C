@@ -6,3 +6,4 @@ mylinearlist.exe
 mylinearlist.dev
 mylinearlist.layout
 SeqList.o
+StaticLinkList.o
