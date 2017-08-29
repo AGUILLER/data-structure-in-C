@@ -80,7 +80,7 @@ int LocateElem_SL(SLinkList S, int e){
 	return i;
 }
 
-void PrintOut_SL(SLinkList space,const int S){
+void PrintOut_SL(LinkList space,const int S){
 	int p = space[S].cur;
 	while (p != 0) {
 		printf("%d ",space[p].data);

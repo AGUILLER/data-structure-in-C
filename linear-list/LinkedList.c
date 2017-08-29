@@ -57,7 +57,7 @@ bool ListInsert_L(LinkList L, int i, int e)
 	if (!p || j > i-1) return false;
 	new_node = (struct LNode *)malloc(sizeof(struct LNode));
 	if (new_node == NULL) {
-		printf("Error: malloc failes in add_to_list1\n");
+		printf("Error: malloc fails in add_to_list1\n");
 		exit(EXIT_FAILURE);
 	}
 	new_node->data = e;
