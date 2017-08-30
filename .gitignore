@@ -3,7 +3,12 @@ LinkedList.o
 main.o
 Makefile.win
 mylinearlist.exe
+myStack.exe
 mylinearlist.dev
 mylinearlist.layout
+myStack.layout
 SeqList.o
 StaticLinkList.o
+SeqStack.o
+StackApp.o
+
