@@ -17,6 +17,7 @@ typedef struct SqStack{
 	int stacksize;     //当前已分配的存储空间(当前最大容量)，以元素为单元 
 }*SqStack, mystack;
 
+
 //构造一个空栈 
 Status InitStack(SqStack S);
 
