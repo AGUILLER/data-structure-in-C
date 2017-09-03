@@ -11,4 +11,5 @@ SeqList.o
 StaticLinkList.o
 SeqStack.o
 StackApp.o
+Recursion.o
 
