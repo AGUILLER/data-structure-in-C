@@ -4,12 +4,23 @@ main.o
 Makefile.win
 mylinearlist.exe
 myStack.exe
+myQueue.exe
 mylinearlist.dev
+myStack.dev
+myQueue.dev
+myArray.dev
+myTree.dev
+myTree.exe
 mylinearlist.layout
 myStack.layout
+myQueue.layout
+myArray.layout
 SeqList.o
 StaticLinkList.o
 SeqStack.o
 StackApp.o
 Recursion.o
+Queue.o
+SeqQueue.o
+BinaryTree.o
 

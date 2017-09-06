@@ -1,6 +1,6 @@
 #include "Queue.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 Status InitQueue(LinkQueue Q) {
 	Q->front = Q->rear = (QueuePtr)malloc(sizeof(QNode));
 	if (Q->front == NULL) {
@@ -8,6 +8,7 @@ Status InitQueue(LinkQueue Q) {
 		exit(EXIT_FAILURE);
 	}
 	Q->front->next = NULL;
+	//printf("Ok"); 
 	return OK;
 }
 
@@ -70,13 +71,17 @@ Status EnQueue(LinkQueue Q, QElemType e) {
 	}
 	p->data = e;
 	p->next = NULL;
-	Q->rear->next = P;
+	Q->rear->next = p;
+	Q->rear = p; 
+	//printf("EnQueue Ok\n");
+	//printf("%d", e);
 	return OK;
 } 
 
 Status DeQueue(LinkQueue Q, QElemType *e) {
 	//若队列不空，则删除Q的队头元素，用e返回其值，并返回OK，否则返回ERROR 
 	QueuePtr p;
+	//空 
 	if (Q->front == Q->rear) return ERROR; 
 	p = Q->front->next;
 	*e = p->data;
@@ -90,12 +95,16 @@ Status DeQueue(LinkQueue Q, QElemType *e) {
 }
 
 Status QueueTraverse(LinkQueue Q, Status(*visit)(QElemType e)) {
+	int i = 1;
 	QueuePtr p;
 	p = Q->front;
 	while (p != Q->rear) {
-		visit(p->next->data);
+		(*visit)(p->next->data);
+		//visit(i);
 		p = p->next;
+		//printf("Fuck\n");
 	}
+	//printf("End\n");
 	printf("\n");
 	return OK;
 } 
