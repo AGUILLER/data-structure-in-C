@@ -15,6 +15,7 @@ mylinearlist.layout
 myStack.layout
 myQueue.layout
 myArray.layout
+myTree.layout
 SeqList.o
 StaticLinkList.o
 SeqStack.o
