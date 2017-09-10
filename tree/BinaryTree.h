@@ -13,8 +13,9 @@ typedef struct BiTNode {
 } BiTNode, *BiTree;
 
 //按先序遍历次序输入二叉树中结点的值（一个字符），空字符表示空树 
-Status CreateBiTree(BiTree T); 
+Status CreateBiTree(BiTree *T); 
 Status PreOrderTraverse(BiTree T, Status (* Visit)(TElemType e));
+Status InOrderTraverse(BiTree T, Status (* Visit)(TElemType e));
 Status PrintElement(TElemType e);
 
 #endif
