@@ -23,10 +23,12 @@ typedef struct BiThrNode {
 	PointerTag RTag;
 } BiThrNode, *BiThrTree; 
 
+BiThrTree pre;
+
 Status InOrderTraverse_Thr(BiThrTree T, Status (*Visit)(TElemType e));
 
 Status InOrderThreading(BiThrTree Thrt, BiThrTree T);
-
+//中序遍历进行中序线索化 
 void InThreading(BiThrTree p);
 
 #endif 
